@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Dashboard Comercial</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="hdr">
+  <div class="hdr-inner">
+    <div class="hdr-brand">
+      <div class="hdr-ico">&#x1F43E;</div>
+      <span class="hdr-name">Dashboard Comercial</span>
+    </div>
+    <div class="hdr-sep"></div>
+    <div class="store-tabs" id="store-tabs"></div>
+    <div class="hdr-mid" id="hdr-periods"></div>
+    <div class="hdr-right">
+      <div class="mode-toggle" id="mode-toggle" style="display:none">
+        <button class="mode-btn active" onclick="setMode('a')">Periodo A</button>
+        <button class="mode-btn" onclick="setMode('b')">Periodo B</button>
+        <button class="mode-btn" onclick="setMode('cmp')">Comparar</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <button class="nav-btn active" data-s="resumen">Resumen</button>
+    <button class="nav-btn" data-s="productos">Productos</button>
+    <button class="nav-btn" data-s="presencia">Presencia</button>
+    <button class="nav-btn" data-s="carrito">Carrito</button>
+    <button class="nav-btn" data-s="promos">Promos &amp; Cupones</button>
+    <button class="nav-btn" data-s="ops">Operaciones</button>
+  </div>
+</nav>
+
+<!-- Filtro de fecha global -->
+<div id="date-filter-area"></div>
+
+<main class="main">
+
+  <!-- RESUMEN -->
+  <section class="section active" id="s-resumen">
+    <div class="kpi-grid" id="kpi-grid"></div>
+    <div class="g2" style="margin-top:16px">
+      <div class="card">
+        <div class="card-t">Categorias <span>lineas &middot; venta neta</span></div>
+        <div id="cat-bars"></div>
+      </div>
+      <div class="card">
+        <div class="card-t">Perro vs. Gato <span>presencia en ticket</span></div>
+        <div id="mascota-area"></div>
+        <div style="position:relative;height:150px"><canvas id="mascotaChart"></canvas></div>
+      </div>
+    </div>
+    <div class="card" style="margin-top:16px">
+      <div class="card-t">Ordenes por dia <span>evolucion dentro del periodo</span></div>
+      <div id="daily-chart-wrap" style="position:relative;height:150px"><canvas id="dailyChart"></canvas></div>
+    </div>
+    <div class="card" style="margin-top:16px">
+      <div class="card-t">Ordenes por hora <span>hora local</span></div>
+      <div style="position:relative;height:150px"><canvas id="hourChart"></canvas></div>
+    </div>
+  </section>
+
+  <!-- PRODUCTOS -->
+  <section class="section" id="s-productos">
+    <div class="card">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px">
+        <div class="card-t" style="margin-bottom:0">Top 12 productos <span>% pos.1 = item ancla del carrito</span></div>
+        <button class="dl-btn" onclick="downloadProducts()">&#x2B07; Descargar top 100 CSV</button>
+      </div>
+      <div class="tbl-wrap">
+        <table class="tbl">
+          <thead><tr>
+            <th>#</th><th>Producto</th><th>Mascota</th><th>Subcategoria</th>
+            <th class="r">Ordenes</th><th class="r">Qty</th><th class="r">Neto</th><th>% pos.1</th>
+          </tr></thead>
+          <tbody id="prod-tbody"></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRESENCIA -->
+  <section class="section" id="s-presencia">
+    <div class="kpi-mini-grid" id="pres-kpis"></div>
+    <div class="g2">
+      <div class="card">
+        <div class="card-t">% de tickets con cada subcategoria</div>
+        <div id="pres-bars"></div>
+      </div>
+      <div class="card">
+        <div class="card-t">Rol en el carrito <span>% ancla vs % add-on</span></div>
+        <div id="rol-bars"></div>
+      </div>
+    </div>
+    <div class="card" style="margin-top:16px">
+      <div class="card-t">Co-ocurrencia <span>de ordenes con 2+ productos: dado que lleva X, % que tambien lleva Y</span></div>
+      <div class="tbl-wrap"><table class="tbl cooc-tbl" id="cooc-table"></table></div>
+      <div class="cooc-legend" style="margin-top:10px;display:flex;gap:8px;flex-wrap:wrap">
+        <span class="cl-item" style="background:#2563eb;color:#fff">30%+</span>
+        <span class="cl-item" style="background:#6092bc;color:#fff">15-29%</span>
+        <span class="cl-item" style="background:#bfdbfe;color:#1e40af">5-14%</span>
+        <span class="cl-item" style="background:#eff4ff;color:#6092bc">menos 5%</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CARRITO -->
+  <section class="section" id="s-carrito">
+    <div class="g2">
+      <div class="card">
+        <div class="card-t">Embudo de conversion</div>
+        <div id="conv-funnel"></div>
+      </div>
+      <div class="card">
+        <div class="card-t">Cross-sell desde item ancla <span>dado pos.1=X, que agrega el cliente despues</span></div>
+        <div class="cs-grid" id="cs-grid"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROMOS -->
+  <section class="section" id="s-promos">
+    <div class="g2">
+      <div class="card">
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px">
+          <div class="card-t" style="margin-bottom:0">Promociones automaticas <span>descuento neto</span></div>
+          <button class="dl-btn" onclick="downloadPromos()">&#x2B07; Descargar completo CSV</button>
+        </div>
+        <div class="tbl-wrap">
+          <table class="tbl">
+            <thead><tr><th>Promo ID</th><th class="r">Usos</th><th class="r">Desc. neto</th><th class="r">Por uso</th></tr></thead>
+            <tbody id="promo-tbody"></tbody>
+          </table>
+        </div>
+      </div>
+      <div class="card">
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px">
+          <div class="card-t" style="margin-bottom:0">Cupones <span>% sobre merch bruta de la orden</span></div>
+          <button class="dl-btn" onclick="downloadCoupons()">&#x2B07; Descargar completo CSV</button>
+        </div>
+        <div class="tbl-wrap">
+          <table class="tbl">
+            <thead><tr><th>Codigo</th><th class="r">Usos</th><th class="r">Descuento</th><th class="r">% bruta</th></tr></thead>
+            <tbody id="coupon-tbody"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OPERACIONES -->
+  <section class="section" id="s-ops">
+    <div class="g2">
+      <div class="card">
+        <div class="card-t">Metodos de envio <span>ticket promedio &middot; items por orden</span></div>
+        <div id="ship-bars"></div>
+      </div>
+      <div class="card">
+        <div class="card-t">Distribucion</div>
+        <div style="position:relative;height:190px"><canvas id="shipChart"></canvas></div>
+        <div id="ship-legend" style="display:flex;flex-wrap:wrap;gap:8px;margin-top:12px;font-size:11px;color:#6b6a72"></div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="ftr">
+  <span id="ftr-left"></span>
+  <span>Confidencial - uso interno comercial</span>
+</footer>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
