@@ -497,8 +497,8 @@ const DASH_DATA = {
       "shipping": [
         {
           "method": "Lima",
-          "n": 4569,
-          "pct": 49.6
+          "n": 4652,
+          "pct": 50.5
         },
         {
           "method": "Click & Collect",
@@ -517,23 +517,23 @@ const DASH_DATA = {
         },
         {
           "method": "Arequipa",
-          "n": 65,
-          "pct": 0.7
+          "n": 93,
+          "pct": 1.0
         },
         {
           "method": "Lima-La-Libertad",
+          "n": 88,
+          "pct": 1.0
+        },
+        {
+          "method": "Lambayeque",
           "n": 50,
           "pct": 0.5
         },
         {
-          "method": "Lambayeque",
-          "n": 32,
-          "pct": 0.3
-        },
-        {
           "method": "Piura",
-          "n": 28,
-          "pct": 0.3
+          "n": 38,
+          "pct": 0.4
         }
       ],
       "promos": [
@@ -3026,67 +3026,67 @@ const DASH_DATA = {
       "shipping_detail": [
         {
           "method": "Lima",
-          "n": 4569,
-          "pct": 49.6,
-          "net": 1147274.76,
-          "ticket": 251.1,
-          "avg_items": 2.3
+          "n": 4652,
+          "pct": 50.5,
+          "net": 860849.91,
+          "ticket": 185.05,
+          "avg_items": 2.2
         },
         {
           "method": "Click & Collect",
           "n": 2768,
           "pct": 30.1,
-          "net": 463011.97,
-          "ticket": 167.27,
+          "net": 343669.31,
+          "ticket": 124.16,
           "avg_items": 1.7
         },
         {
           "method": "Express",
           "n": 1362,
           "pct": 14.8,
-          "net": 243450.38,
-          "ticket": 178.74,
+          "net": 191086.53,
+          "ticket": 140.3,
           "avg_items": 2.1
         },
         {
           "method": "Programado",
           "n": 318,
           "pct": 3.5,
-          "net": 80110.33,
-          "ticket": 251.92,
+          "net": 51278.89,
+          "ticket": 161.25,
           "avg_items": 2.6
         },
         {
           "method": "Arequipa",
-          "n": 65,
-          "pct": 0.7,
-          "net": 19923.59,
-          "ticket": 306.52,
-          "avg_items": 1.4
+          "n": 93,
+          "pct": 1.0,
+          "net": 17215.61,
+          "ticket": 185.11,
+          "avg_items": 1.0
         },
         {
           "method": "Lima-La-Libertad",
-          "n": 50,
-          "pct": 0.5,
-          "net": 18684.59,
-          "ticket": 373.69,
-          "avg_items": 1.3
+          "n": 88,
+          "pct": 1.0,
+          "net": 15839.59,
+          "ticket": 180.0,
+          "avg_items": 0.8
         },
         {
           "method": "Lambayeque",
-          "n": 32,
-          "pct": 0.3,
-          "net": 12032.46,
-          "ticket": 376.01,
-          "avg_items": 1.3
+          "n": 50,
+          "pct": 0.5,
+          "net": 8897.01,
+          "ticket": 177.94,
+          "avg_items": 0.8
         },
         {
           "method": "Piura",
-          "n": 28,
-          "pct": 0.3,
-          "net": 9831.27,
-          "ticket": 351.12,
-          "avg_items": 1.3
+          "n": 38,
+          "pct": 0.4,
+          "net": 7462.37,
+          "ticket": 196.38,
+          "avg_items": 1.0
         }
       ],
       "daily": [
@@ -3700,8 +3700,8 @@ const DASH_DATA = {
       "shipping": [
         {
           "method": "Lima",
-          "n": 3767,
-          "pct": 47.2
+          "n": 3842,
+          "pct": 48.2
         },
         {
           "method": "Click & Collect",
@@ -3720,23 +3720,23 @@ const DASH_DATA = {
         },
         {
           "method": "Arequipa",
-          "n": 19,
-          "pct": 0.2
+          "n": 30,
+          "pct": 0.4
         },
         {
           "method": "Lima-La-Libertad",
-          "n": 16,
-          "pct": 0.2
+          "n": 28,
+          "pct": 0.4
         },
         {
           "method": "Lambayeque",
-          "n": 9,
-          "pct": 0.1
+          "n": 20,
+          "pct": 0.3
         },
         {
           "method": "Piura",
-          "n": 8,
-          "pct": 0.1
+          "n": 15,
+          "pct": 0.2
         }
       ],
       "promos": [
@@ -5629,67 +5629,67 @@ const DASH_DATA = {
       "shipping_detail": [
         {
           "method": "Lima",
-          "n": 3767,
-          "pct": 47.2,
-          "net": 810098.29,
-          "ticket": 215.05,
-          "avg_items": 2.1
+          "n": 3842,
+          "pct": 48.2,
+          "net": 692751.8,
+          "ticket": 180.31,
+          "avg_items": 2.0
         },
         {
           "method": "Click & Collect",
           "n": 2054,
           "pct": 25.7,
-          "net": 323453.82,
-          "ticket": 157.48,
+          "net": 233922.43,
+          "ticket": 113.89,
           "avg_items": 1.5
         },
         {
           "method": "Express",
           "n": 1719,
           "pct": 21.5,
-          "net": 304046.16,
-          "ticket": 176.87,
+          "net": 257389.02,
+          "ticket": 149.73,
           "avg_items": 2.0
         },
         {
           "method": "Programado",
           "n": 382,
           "pct": 4.8,
-          "net": 80824.0,
-          "ticket": 211.58,
+          "net": 62547.54,
+          "ticket": 163.74,
           "avg_items": 1.9
         },
         {
           "method": "Arequipa",
-          "n": 19,
-          "pct": 0.2,
-          "net": 5108.14,
-          "ticket": 268.85,
-          "avg_items": 1.2
+          "n": 30,
+          "pct": 0.4,
+          "net": 6758.85,
+          "ticket": 225.29,
+          "avg_items": 0.7
         },
         {
           "method": "Lima-La-Libertad",
-          "n": 16,
-          "pct": 0.2,
-          "net": 2803.73,
-          "ticket": 175.23,
-          "avg_items": 1.1
+          "n": 28,
+          "pct": 0.4,
+          "net": 4393.42,
+          "ticket": 156.91,
+          "avg_items": 0.6
         },
         {
           "method": "Lambayeque",
-          "n": 9,
-          "pct": 0.1,
-          "net": 1454.57,
-          "ticket": 161.62,
-          "avg_items": 1.4
+          "n": 20,
+          "pct": 0.3,
+          "net": 2301.17,
+          "ticket": 115.06,
+          "avg_items": 0.7
         },
         {
           "method": "Piura",
-          "n": 8,
-          "pct": 0.1,
-          "net": 1156.0,
-          "ticket": 144.5,
-          "avg_items": 1.1
+          "n": 15,
+          "pct": 0.2,
+          "net": 1937.8,
+          "ticket": 129.19,
+          "avg_items": 0.6
         }
       ],
       "daily": [
@@ -6326,8 +6326,8 @@ const DASH_DATA = {
         },
         {
           "method": "Santiago",
-          "n": 5739,
-          "pct": 20.6
+          "n": 5798,
+          "pct": 20.8
         },
         {
           "method": "Programado",
@@ -6341,23 +6341,23 @@ const DASH_DATA = {
         },
         {
           "method": "Valparaiso",
-          "n": 238,
-          "pct": 0.9
+          "n": 417,
+          "pct": 1.5
         },
         {
           "method": "Bio_Bio",
-          "n": 230,
-          "pct": 0.8
+          "n": 348,
+          "pct": 1.3
         },
         {
           "method": "Santiago",
-          "n": 154,
-          "pct": 0.6
+          "n": 289,
+          "pct": 1.0
         },
         {
-          "method": "Coquimbo",
-          "n": 129,
-          "pct": 0.5
+          "method": "Antofagasta",
+          "n": 241,
+          "pct": 0.9
         }
       ],
       "promos": [
@@ -10466,65 +10466,65 @@ const DASH_DATA = {
           "method": "Click & Collect",
           "n": 13826,
           "pct": 49.7,
-          "net": 804197249.0,
-          "ticket": 58165.58,
+          "net": 612778103.0,
+          "ticket": 44320.71,
           "avg_items": 1.6
         },
         {
           "method": "Santiago",
-          "n": 5739,
-          "pct": 20.6,
-          "net": 442835726.0,
-          "ticket": 77162.52,
+          "n": 5798,
+          "pct": 20.8,
+          "net": 340837277.0,
+          "ticket": 58785.32,
           "avg_items": 2.0
         },
         {
           "method": "Programado",
           "n": 5618,
           "pct": 20.2,
-          "net": 455447675.0,
-          "ticket": 81069.36,
+          "net": 309411687.0,
+          "ticket": 55075.06,
           "avg_items": 2.0
         },
         {
           "method": "Express",
           "n": 1283,
           "pct": 4.6,
-          "net": 71246800.0,
-          "ticket": 55531.41,
+          "net": 54541325.0,
+          "ticket": 42510.78,
           "avg_items": 1.8
         },
         {
           "method": "Valparaiso",
-          "n": 238,
-          "pct": 0.9,
-          "net": 17149599.0,
-          "ticket": 72057.14,
-          "avg_items": 1.2
+          "n": 417,
+          "pct": 1.5,
+          "net": 20034244.0,
+          "ticket": 48043.75,
+          "avg_items": 0.7
         },
         {
           "method": "Bio_Bio",
-          "n": 230,
-          "pct": 0.8,
-          "net": 16828649.0,
-          "ticket": 73168.04,
-          "avg_items": 1.2
+          "n": 348,
+          "pct": 1.3,
+          "net": 18130044.0,
+          "ticket": 52097.83,
+          "avg_items": 0.8
         },
         {
           "method": "Santiago",
-          "n": 154,
-          "pct": 0.6,
-          "net": 11707202.0,
-          "ticket": 76020.79,
-          "avg_items": 1.2
+          "n": 289,
+          "pct": 1.0,
+          "net": 14299874.0,
+          "ticket": 49480.53,
+          "avg_items": 0.6
         },
         {
-          "method": "Coquimbo",
-          "n": 129,
-          "pct": 0.5,
-          "net": 8431665.0,
-          "ticket": 65361.74,
-          "avg_items": 1.3
+          "method": "Antofagasta",
+          "n": 241,
+          "pct": 0.9,
+          "net": 11734301.0,
+          "ticket": 48690.05,
+          "avg_items": 0.6
         }
       ],
       "daily": [
@@ -11149,8 +11149,8 @@ const DASH_DATA = {
         },
         {
           "method": "Santiago",
-          "n": 6366,
-          "pct": 24.7
+          "n": 6436,
+          "pct": 25.0
         },
         {
           "method": "Programado",
@@ -11164,23 +11164,23 @@ const DASH_DATA = {
         },
         {
           "method": "Santiago",
-          "n": 494,
-          "pct": 1.9
+          "n": 678,
+          "pct": 2.6
         },
         {
           "method": "Valparaiso",
-          "n": 370,
-          "pct": 1.4
+          "n": 531,
+          "pct": 2.1
         },
         {
           "method": "Bio_Bio",
-          "n": 324,
-          "pct": 1.3
+          "n": 451,
+          "pct": 1.7
         },
         {
           "method": "Antofagasta",
-          "n": 251,
-          "pct": 1.0
+          "n": 393,
+          "pct": 1.5
         }
       ],
       "promos": [
@@ -14899,65 +14899,65 @@ const DASH_DATA = {
           "method": "Click & Collect",
           "n": 11774,
           "pct": 45.6,
-          "net": 703942227.0,
-          "ticket": 59787.86,
+          "net": 527709452.0,
+          "ticket": 44819.9,
           "avg_items": 1.7
         },
         {
           "method": "Santiago",
-          "n": 6366,
-          "pct": 24.7,
-          "net": 475146968.0,
-          "ticket": 74638.23,
-          "avg_items": 2.1
+          "n": 6436,
+          "pct": 25.0,
+          "net": 359169134.0,
+          "ticket": 55806.27,
+          "avg_items": 2.0
         },
         {
           "method": "Programado",
           "n": 4197,
           "pct": 16.3,
-          "net": 322202014.0,
-          "ticket": 76769.6,
+          "net": 193613234.0,
+          "ticket": 46131.34,
           "avg_items": 2.2
         },
         {
           "method": "Express",
           "n": 1069,
           "pct": 4.1,
-          "net": 60288030.0,
-          "ticket": 56396.66,
+          "net": 45062105.0,
+          "ticket": 42153.51,
           "avg_items": 1.8
         },
         {
           "method": "Santiago",
-          "n": 494,
-          "pct": 1.9,
-          "net": 39762936.0,
-          "ticket": 80491.77,
-          "avg_items": 1.2
+          "n": 678,
+          "pct": 2.6,
+          "net": 37625291.0,
+          "ticket": 55494.53,
+          "avg_items": 0.9
         },
         {
           "method": "Valparaiso",
-          "n": 370,
-          "pct": 1.4,
-          "net": 27621654.0,
-          "ticket": 74653.12,
-          "avg_items": 1.3
+          "n": 531,
+          "pct": 2.1,
+          "net": 27145795.0,
+          "ticket": 51122.02,
+          "avg_items": 0.9
         },
         {
           "method": "Bio_Bio",
-          "n": 324,
-          "pct": 1.3,
-          "net": 23046078.0,
-          "ticket": 71129.87,
-          "avg_items": 1.2
+          "n": 451,
+          "pct": 1.7,
+          "net": 23823947.0,
+          "ticket": 52824.72,
+          "avg_items": 0.9
         },
         {
           "method": "Antofagasta",
-          "n": 251,
-          "pct": 1.0,
-          "net": 20022381.0,
-          "ticket": 79770.44,
-          "avg_items": 1.3
+          "n": 393,
+          "pct": 1.5,
+          "net": 22531534.0,
+          "ticket": 57332.15,
+          "avg_items": 0.8
         }
       ],
       "daily": [
